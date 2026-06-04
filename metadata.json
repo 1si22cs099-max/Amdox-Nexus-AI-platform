@@ -1,0 +1,6 @@
+{
+  "name": "Amdox Nexus AI Platform",
+  "description": "Enterprise-grade multi-tenant ERP Web Application with integrated simulated AI insights and role-based access control.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

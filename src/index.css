@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --bg: #020617;
+  --sidebar: #0f172a;
+  --card: #1e293b;
+  --accent: #38bdf8;
+  --accent-glow: rgba(56, 189, 248, 0.15);
+  --text: #f8fafc;
+  --text-dim: #94a3b8;
+  --border: #334155;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+}
+
+/* Base Body and HTML Overrides */
+html, body, #root {
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+  font-family: var(--font-sans) !important;
+}
+
+.dark, html {
+  color-scheme: dark;
+}
+
+/* Main Container Structure */
+.bg-slate-50\/50, .bg-slate-50, .bg-slate-950, .bg-slate-900, .bg-slate-100 {
+  background-color: var(--bg) !important;
+}
+
+/* Card Overrides */
+.bg-white, [class*="bg-white"] {
+  background-color: var(--card) !important;
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+
+/* Background Grays */
+.bg-slate-50, .bg-gray-50, .bg-gray-50\/50, .bg-slate-105, .bg-slate-100, .bg-gray-100 {
+  background-color: var(--sidebar) !important;
+}
+
+/* Border Overrides */
+.border, .border-b, .border-t, .border-l, .border-r,
+.border-gray-50, .border-gray-100, .border-gray-150, .border-gray-200, .border-gray-250, .border-gray-150\/80,
+.border-slate-850, .border-slate-800, .border-slate-700, .border-slate-750, .border-slate-100 {
+  border-color: var(--border) !important;
+}
+
+/* Secondary Slate/Gray Inputs/Form Containers */
+.bg-slate-850 {
+  background-color: var(--bg) !important;
+}
+
+/* Text Overrides - Standard Text */
+.text-gray-900, .text-gray-950, .text-slate-900, .text-slate-100, .text-white, .text-indigo-950, .text-slate-950 {
+  color: var(--text) !important;
+}
+
+/* Text Overrides - Inactive/Subtle Text */
+.text-gray-800, .text-gray-700, .text-slate-800, .text-slate-700, .text-slate-355 {
+  color: #e2e8f0 !important;
+}
+
+.text-gray-500, .text-gray-600, .text-gray-450, .text-gray-400, .text-slate-500, .text-slate-400, .text-slate-300 {
+  color: var(--text-dim) !important;
+}
+
+/* Focus and inputs */
+input, select, textarea, button[type="button"] {
+  background-color: var(--sidebar) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text) !important;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 2px var(--accent-glow) !important;
+}
+
+/* Accent element overrides (Sky/Cyan Accent) */
+.text-indigo-600, .text-indigo-700, .text-indigo-500, .text-indigo-400 {
+  color: var(--accent) !important;
+}
+
+.bg-indigo-600 {
+  background-color: var(--accent) !important;
+  color: var(--bg) !important;
+  font-weight: 600 !important;
+}
+
+.bg-indigo-600:hover {
+  background-color: #7dd3fc !important; /* Sky-300 */
+}
+
+.bg-indigo-900 {
+  background-color: var(--accent-glow) !important;
+  color: var(--accent) !important;
+  border: 1px solid var(--accent) !important;
+}
+
+.bg-indigo-900:hover {
+  background-color: rgba(56, 189, 248, 0.3) !important;
+}
+
+.bg-indigo-50, .bg-indigo-50\/20 {
+  background-color: var(--accent-glow) !important;
+  color: var(--accent) !important;
+}
+
+.border-indigo-150, .border-indigo-100, .border-indigo-200 {
+  border-color: var(--accent) !important;
+}
+
+/* Statuses & Notifications UI */
+.bg-emerald-50, .bg-emerald-50\/20, .bg-emerald-500\/10 {
+  background-color: rgba(16, 185, 129, 0.15) !important;
+  color: var(--success) !important;
+  border-color: rgba(16, 185, 129, 0.3) !important;
+}
+
+.text-emerald-600, .text-emerald-500 {
+  color: var(--success) !important;
+}
+
+.bg-red-50, .bg-rose-50, .bg-rose-500\/10, .bg-red-50\/50, .bg-amber-50\/50 {
+  background-color: rgba(239, 68, 68, 0.15) !important;
+  color: var(--danger) !important;
+  border-color: rgba(239, 68, 68, 0.3) !important;
+}
+
+.text-red-600, .text-rose-500, .text-red-500 {
+  color: var(--danger) !important;
+}
+
+.bg-amber-50, .bg-amber-500\/10 {
+  background-color: rgba(245, 158, 11, 0.15) !important;
+  color: var(--warning) !important;
+  border-color: rgba(245, 158, 11, 0.3) !important;
+}
+
+.text-amber-600, .text-amber-500, .text-amber-950, .text-amber-800 {
+  color: var(--warning) !important;
+}
+
+/* Navigation items overrides */
+nav button, header button {
+  transition: all 0.2s ease-in-out;
+}
+
+nav button.bg-indigo-900 {
+  background-color: rgba(56, 189, 248, 0.15) !important;
+  color: var(--accent) !important;
+  border-color: var(--accent) !important;
+}
+
+nav button:not(.bg-indigo-900) {
+  color: var(--text-dim) !important;
+  background-color: transparent !important;
+}
+
+nav button:not(.bg-indigo-900):hover {
+  color: var(--text) !important;
+  background-color: var(--border) !important;
+}
+
+/* Chart Styles and SVGs */
+.recharts-cartesian-grid-horizontal line, .recharts-cartesian-grid-vertical line {
+  stroke: var(--border) !important;
+}
+
+.recharts-text {
+  fill: var(--text-dim) !important;
+}
+
+/* Tooltip standard card */
+.recharts-default-tooltip {
+  background-color: var(--sidebar) !important;
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+
+/* Table layout adjustments */
+table {
+  color: var(--text) !important;
+}
+
+tr:hover {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+/* Custom dashboard scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-dim);
+}
+:root[data-theme="light"] {
+  --bg: #ffffff;
+  --text: #111111;
+  --card: #f5f5f5;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0f172a;
+  --text: #ffffff;
+  --card: #1e293b;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: all 0.3s ease;
+}
